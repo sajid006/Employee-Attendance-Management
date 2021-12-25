@@ -1,0 +1,48 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">EmployeeId</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="EmployeeId"
+        placeholder="Id">
+    </div>
+    <label class="col-sm-2 col-form-label">First Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="FirstName"
+        placeholder="First Name">
+    </div>
+    <label class="col-sm-2 col-form-label">Last Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="LastName"
+        placeholder="Last Name">
+    </div>
+    <label class="col-sm-2 col-form-label">Designation</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Designation"
+        placeholder="Designation">
+    </div>
+    <label class="col-sm-2 col-form-label">Address</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Address"
+        placeholder="Address">
+    </div>
+    <label class="col-sm-2 col-form-label">Phone Number</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="PhoneNumber"
+        placeholder="Phone Number">
+    </div>
+    <label class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Email"
+        placeholder="Email">
+    </div>
+    <label class="col-sm-2 col-form-label">Pin</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Pin"
+        placeholder="Pin">
+    </div>
+    <button (click)="goToAdmin()" routerLink="admin" class="btn btn-primary">
+        Add Employee
+    </button>
+</div>
+
+

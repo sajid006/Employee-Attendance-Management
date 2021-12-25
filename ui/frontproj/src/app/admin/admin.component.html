@@ -1,0 +1,87 @@
+
+<meta *ngIf="!AdminOk" http-equiv="Refresh" content="0; url='http://localhost:4200'" />
+<div *ngIf="AdminOk">
+
+  <button type="button" class="btn btn-primary float-left m-2" 
+  data-toggle="modal" data-target="#exampleModal"
+  (click)="registerClick()" 
+  data-backdrop="static" data-keyboard="false"
+  >
+      Add Member
+    </button> 
+
+
+<app-register  [wrk]="wrk" *ngIf="ActivateRegister"></app-register>
+
+<br><br><br><div><h2>Employee List</h2></div>
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Designation</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Pin</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of EmployeeList">
+            <td>{{dataItem.EmployeeId}}</td>
+            <td>{{dataItem.FirstName}}</td>
+            <td>{{dataItem.LastName}}</td>
+            <td>{{dataItem.Designation}}</td>
+            <td>{{dataItem.Address}}</td>
+            <td>{{dataItem.PhoneNumber}}</td>
+            <td>{{dataItem.Email}}</td>
+            <td>{{dataItem.Pin}}</td>
+            <td>
+                
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button  type="button" class="btn btn-primary float-left m-2" 
+data-toggle="modal" data-target="#exampleModal"
+(click)="monthlyClick()" 
+data-backdrop="static" data-keyboard="false"
+>
+    See Monthly Data
+  </button>
+<table *ngIf="monthly" class="table table-striped">
+  <thead>
+      <tr>
+          <th>Employee Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>First Entry Date</th>
+          <th>First Entry Time</th>
+          <th>Last Exit Date</th>
+          <th>Last Exit Time</th>
+          <th>Total Stay</th>
+          
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let dataItem of ComplexList">
+          <td>{{dataItem.EmployeeId}}</td>
+          <td>{{dataItem.FirstName}}</td>
+          <td>{{dataItem.LastName}}</td>
+          <td>{{dataItem.FirstDate}}</td>
+          <td>{{dataItem.EntryTime}}</td>
+          <td>{{dataItem.LastDate}}</td>
+          <td>{{dataItem.ExitTime}}</td>
+          <td>{{dataItem.TotalTime}}</td>
+          
+          <td>
+              
+              
+          </td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
