@@ -22,7 +22,7 @@ export class AdminComponent implements OnInit {
   ComplexList:any=[];
   monthly:boolean=false;
   ngOnInit(): void {
-    //this.ymes = formatDate(new Date(), 'hh:mm:hh', 'en').toString();
+    this.ymes = formatDate(new Date(), 'hh:mm:hh', 'en').toString();
     this.refreshWorkList();
     this.refreshEmpList();
     
@@ -115,6 +115,7 @@ export class AdminComponent implements OnInit {
       
       this.EmployeeList=data;
       let x = this.WorkList.length;
+      this.ymes = formatDate(new Date(), 'hh:mm:hh', 'en').toString();
       this.monthlyReport();
     if(this.EmployeeList[0].EmployeeId.toString()==this.WorkList[x-1].EmployeeId.toString() && 
     this.EmployeeList[0].Pin.toString()==this.WorkList[x-1].Pin.toString() &&
