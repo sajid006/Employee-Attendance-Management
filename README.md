@@ -1,1 +1,1 @@
-# Employee attendance system using Angular 10, Python Django & MongoDb
+# Employee attendance system using Angular 10(Typescript), Python Django & MongoDb
